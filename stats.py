@@ -18,9 +18,7 @@ def sort_on(dictionary):
 
 def sort_dictionary(unsorted_dictionary):
     dictionary_list = [] 
-    index = 0
     for key in unsorted_dictionary:
-        dictionary_list[index] = {"char": key, "num": unsorted_dictionary[key]}
-        index += 1
-    sorted_dictionary_list = dictionary_list.sort(reverse=True, key=sort_on)
-    return sorted_dictionary_list
+        dictionary_list.append({"char": key, "num": unsorted_dictionary[key]})
+    dictionary_list.sort(reverse=True, key=sort_on)
+    return dictionary_list
